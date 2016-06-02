@@ -6,6 +6,9 @@
 package pkg.cliente.soap;
 
 import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.xml.bind.annotation.XmlSeeAlso;
 import pkg_servicio_web.ServicioWebServidor;
 import pkg_servicio_web.ServicioWebServidor_Service;
 import pkg_servicio_web_vent.ServiciowebServidorVen_Service;
@@ -15,6 +18,12 @@ import pkg_servicio_web_vent.ServiciowebServidorVen;
  *
  * @author Paúl
  */
+/**
+ *
+ * @author diego
+ */
+@ManagedBean()
+@SessionScoped
 public class Venta_Cliente {
 
     private ServicioWebServidor_Service service = new ServicioWebServidor_Service();
@@ -85,13 +94,15 @@ public class Venta_Cliente {
         this.ven_lugar = ven_lugar;
     }
 
-    public String getVent_nombre() {
+    public String getVen_nombre() {
         return ven_nombre;
     }
 
-    public void setVent_nombre(String vent_nombre) {
-        this.ven_nombre = vent_nombre;
+    public void setVen_nombre(String ven_nombre) {
+        this.ven_nombre = ven_nombre;
     }
+
+    
 
     /*METODO INSERTAR */
     public void insertar() {

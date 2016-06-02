@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://pkg_servicio_web_vent/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://pkg_servicio_web_vent/">
+
+<xs:element name="buscar" type="tns:buscar"/>
+
+<xs:element name="buscarResponse" type="tns:buscarResponse"/>
+
+<xs:element name="buscartodoooo" type="tns:buscartodoooo"/>
+
+<xs:element name="buscartodooooResponse" type="tns:buscartodooooResponse"/>
+
+<xs:element name="eliminar" type="tns:eliminar"/>
+
+<xs:element name="eliminarResponse" type="tns:eliminarResponse"/>
+
+<xs:element name="getList" type="tns:getList"/>
+
+<xs:element name="getListResponse" type="tns:getListResponse"/>
+
+<xs:element name="getVenta" type="tns:getVenta"/>
+
+<xs:element name="getVentaResponse" type="tns:getVentaResponse"/>
+
+<xs:element name="insertar" type="tns:insertar"/>
+
+<xs:element name="insertarResponse" type="tns:insertarResponse"/>
+
+<xs:element name="modificar" type="tns:modificar"/>
+
+<xs:element name="modificarResponse" type="tns:modificarResponse"/>
+
+<xs:element name="setList" type="tns:setList"/>
+
+<xs:element name="setListResponse" type="tns:setListResponse"/>
+
+<xs:element name="setVenta" type="tns:setVenta"/>
+
+<xs:element name="setVentaResponse" type="tns:setVentaResponse"/>
+
+<xs:complexType name="venta">
+<xs:sequence>
+<xs:element name="clie_id" type="xs:string" minOccurs="0"/>
+<xs:element name="lista" type="tns:venta" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="listas" type="tns:venta" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+<xs:element name="usu_id" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_id" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_lugar" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVenta">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getVentaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:venta" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificar">
+<xs:sequence>
+<xs:element name="ven_id" type="xs:string" minOccurs="0"/>
+<xs:element name="clie_id" type="xs:string" minOccurs="0"/>
+<xs:element name="usu_id" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_lugar" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="modificarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setList">
+<xs:sequence>
+<xs:element name="arg0" type="tns:venta" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setListResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="insertar">
+<xs:sequence>
+<xs:element name="ven_id" type="xs:string" minOccurs="0"/>
+<xs:element name="clie_id" type="xs:string" minOccurs="0"/>
+<xs:element name="usu_id" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_lugar" type="xs:string" minOccurs="0"/>
+<xs:element name="ven_nombre" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="insertarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setVenta">
+<xs:sequence>
+<xs:element name="arg0" type="tns:venta" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="setVentaResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="buscar">
+<xs:sequence>
+<xs:element name="ven_id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminar">
+<xs:sequence>
+<xs:element name="ven_id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="eliminarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscartodoooo">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="buscartodooooResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:anyType" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:venta" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

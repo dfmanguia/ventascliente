@@ -21,59 +21,67 @@ and open the template in the editor.
             <h:form id="frmprincipal">
                 <p:growl id="mensajeGeneral" showDetail="true"/>
                 <p:panel id="panel2">
-                    <h:panelGrid id="panel" columns="1">
+                    <h:panelGrid id="panel" columns="2">
                         <p:outputLabel for="idProd" value="Cita #" />
-                        <p:inputText id="idProd" required="true" value="#{cliente_soap.pro_id}"></p:inputText>
+                        <p:inputText id="idProd" required="true" value="#{venta_Cliente.ven_id}"></p:inputText>
 
-                        <p:outputLabel for="codBarras" value="Id del Departamen" />
-                        <p:inputText id="codBarras" required="true" value="#{cliente_soap.dep_id}"></p:inputText>
+                        <p:outputLabel for="codBarras" value="Id del Cliente" />
+                        <p:inputText id="codBarras" required="true" value="#{venta_Cliente.clie_id}"></p:inputText>
 
-                        <p:outputLabel for="codBarras2" value="Id del lugar" />
-                        <p:inputText id="codBarras2" required="true" value="#{cliente_soap.lug_id}"></p:inputText>
+                        <p:outputLabel for="codBarras2" value="Id del Usuario" />
+                        <p:inputText id="codBarras2" required="true" value="#{venta_Cliente.usu_id}"></p:inputText>
+
+                        <p:outputLabel for="nombre" value="Lugar de Proyecto" />
+                        <p:inputText id="nombre" required="true" value="#{venta_Cliente.ven_lugar}"></p:inputText>
 
                         <p:outputLabel for="nombre" value="Nombre de Proyecto" />
-                        <p:inputText id="nombre" required="true" value="#{cliente_soap.pro_nombre}"></p:inputText>
+                        <p:inputText id="nombrep" required="true" value="#{venta_Cliente.ven_nombre}"></p:inputText>
 
 
                     </h:panelGrid>
 
                     <h:panelGrid id="panel4" columns="3">
-                        <p:commandButton action="#{cliente_soap.insertar()}" value="INSERTAR" update="panel,tabla"></p:commandButton>
-                        <p:commandButton action="#{cliente_soap.modificar()}" value="MODIFICAR" update="panel,tabla"></p:commandButton>
+                        <p:commandButton action="#{venta_Cliente.insertar()}" value="INSERTAR" update="panel,tabla"></p:commandButton>
+                        <p:commandButton action="#{venta_Cliente.modificar()}" value="MODIFICAR" update="panel,tabla"></p:commandButton>
                     </h:panelGrid>
                 </p:panel>
                 <p:panel id="panel3">
                     <h:panelGrid id="paneltabla" columns="1" >
-                        <p:dataTable id="tabla" value="#{cliente_soap.buscartodo()}" var="UsuariosItem" scrollable="true" scrollHeight="300" >
+                        <p:dataTable id="tabla" value="#{venta_Cliente.buscartodo()}" var="UsuariosItem" scrollable="true" scrollHeight="300" >
                             <f:facet name="header">
-                                <h:outputText value="PROYECTOS"/>
+                                <h:outputText value="CITAS  "/>
                             </f:facet>
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="ID DEL PROYECTO"/>
+                                    <h:outputText value="CITA #"/>
                                 </f:facet>
-                                <h:outputText value="#{UsuariosItem.proId}"/>
+                                <h:outputText value="#{UsuariosItem.venId}"/>
                             </p:column>
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="CEDULA"/>
+                                    <h:outputText value="CLIENTE"/>
                                 </f:facet>
-                                <h:outputText value="#{UsuariosItem.depId}"/>
+                                <h:outputText value="#{UsuariosItem.clieId}"/>
                             </p:column>
                             
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="TELÉFONO CONVENCIONAL"/>
+                                    <h:outputText value="USUARIO"/>
                                 </f:facet>
-                                <h:outputText value="#{UsuariosItem.lugId}"/>
+                                <h:outputText value="#{UsuariosItem.usuId}"/>
                             </p:column>
                             <p:column>
                                 <f:facet name="header">
-                                    <h:outputText value="TELÉFONO CELULAR"/>
+                                    <h:outputText value="LUGAR DE PROYECTO"/>
                                 </f:facet>
-                                <h:outputText value="#{UsuariosItem.proNombre}"/>
+                                <h:outputText value="#{UsuariosItem.venLugar}"/>
                             </p:column>
-                            
+                            <p:column>
+                                <f:facet name="header">
+                                    <h:outputText value="NOMBRE DE PROYECTO"/>
+                                </f:facet>
+                                <h:outputText value="#{UsuariosItem.venNombre}"/>
+                            </p:column>
 
                      
 
