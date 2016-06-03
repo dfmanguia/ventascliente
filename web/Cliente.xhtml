@@ -33,10 +33,8 @@ and open the template in the editor.
 
                         <p:outputLabel for="nombre" value="Lugar de Proyecto" />
                         <p:inputText id="nombre" required="true" value="#{venta_Cliente.ven_lugar}"></p:inputText>
-
-                        <p:outputLabel for="nombre" value="Nombre de Proyecto" />
-                        <p:inputText id="nombrep" required="true" value="#{venta_Cliente.ven_nombre}"></p:inputText>
-
+                    
+                        
                         <p:outputLabel  value="Nombre de Proyecto: " />
                         <p:selectOneMenu value="#{venta_Cliente.ven_nombre}" style="width:180px;">
                             <f:selectItems value="#{venta_Cliente.buscartodopro()}" var="car" 

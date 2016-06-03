@@ -173,7 +173,7 @@ public class Venta_Cliente {
         System.out.println("dddddd" + l1.size());
 
         for (int i = 0; i < l1.size(); i++) {
-            System.out.println("" + l1.get(i).getVenId());
+            System.out.println("" + l1.get(i).getVenId()+" "+l1.get(i).getVenNombre()+" "+l1.get(i).getVenLugar());
         }
 
         return l1;
