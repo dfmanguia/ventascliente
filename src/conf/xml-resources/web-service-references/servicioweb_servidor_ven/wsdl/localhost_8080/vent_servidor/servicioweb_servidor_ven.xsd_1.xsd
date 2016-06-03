@@ -48,16 +48,6 @@
 </xs:sequence>
 </xs:complexType>
 
-<xs:complexType name="getVenta">
-<xs:sequence/>
-</xs:complexType>
-
-<xs:complexType name="getVentaResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:venta" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
 <xs:complexType name="modificar">
 <xs:sequence>
 <xs:element name="ven_id" type="xs:string" minOccurs="0"/>
@@ -71,6 +61,16 @@
 <xs:complexType name="modificarResponse">
 <xs:sequence>
 <xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getVenta">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getVentaResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:venta" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

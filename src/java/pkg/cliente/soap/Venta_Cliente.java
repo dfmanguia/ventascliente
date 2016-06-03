@@ -185,15 +185,35 @@ public class Venta_Cliente {
         List <pkg_servicio_web.Proyecto>l1;
         
         l1 = port.getList();
-          System.out.println("dddddd"+l1.size());
+         // System.out.println("dddddd"+l1.size());
          
           for (int i = 0; i < l1.size(); i++) {
-              System.out.println(""+l1.get(i).getProId());
+             // System.out.println(""+l1.get(i).getProId());
           }
    
             
      
         return l1;
     }
-
+     
+   public void buscarLugarProyecto() {
+        String id;
+        //System.out.println("Esto es "+ven_nombre);
+        try {
+            id = port.buscar(ven_nombre);
+            System.out.println("" + id);
+            if (id != null) {
+                ven_lugar = port.buscarLugar(id);
+                
+                mensaje = "Registro encontrado";
+                
+            } else {
+                mensaje = "No se pudo encontrar el registro";
+            }
+            
+        } catch (Exception ex) {
+            mensaje = "No se pudo encontrar el registro";
+           
+        }  
+ }
 }

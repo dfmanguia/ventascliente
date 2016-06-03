@@ -33,12 +33,14 @@ and open the template in the editor.
 
                         <p:outputLabel for="nombre" value="Lugar de Proyecto" />
                         <p:inputText id="nombre" required="true" value="#{venta_Cliente.ven_lugar}"></p:inputText>
-                    
-                        
+
+
                         <p:outputLabel  value="Nombre de Proyecto: " />
                         <p:selectOneMenu value="#{venta_Cliente.ven_nombre}" style="width:180px;">
+                            <p:ajax  listener="#{venta_Cliente.buscarLugarProyecto()}" update="nombre" />
                             <f:selectItems value="#{venta_Cliente.buscartodopro()}" var="car" 
                                            itemLabel="#{car.proNombre}" itemValue="#{car.proNombre}" />
+
                         </p:selectOneMenu>
 
                     </h:panelGrid>
@@ -66,7 +68,7 @@ and open the template in the editor.
                                 </f:facet>
                                 <h:outputText value="#{UsuariosItem.clieId}"/>
                             </p:column>
-                            
+
                             <p:column>
                                 <f:facet name="header">
                                     <h:outputText value="USUARIO"/>
@@ -86,7 +88,7 @@ and open the template in the editor.
                                 <h:outputText value="#{UsuariosItem.venNombre}"/>
                             </p:column>
 
-                     
+
 
                             <f:facet name="footer">
                                 <h:outputText value="fin"/>

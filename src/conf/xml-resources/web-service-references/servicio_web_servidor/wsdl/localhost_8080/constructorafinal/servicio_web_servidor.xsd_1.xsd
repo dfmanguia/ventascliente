@@ -2,6 +2,10 @@
 
 <xs:element name="buscar" type="tns:buscar"/>
 
+<xs:element name="buscarLugar" type="tns:buscarLugar"/>
+
+<xs:element name="buscarLugarResponse" type="tns:buscarLugarResponse"/>
+
 <xs:element name="buscarResponse" type="tns:buscarResponse"/>
 
 <xs:element name="buscartodoooo" type="tns:buscartodoooo"/>
@@ -62,9 +66,21 @@
 </xs:sequence>
 </xs:complexType>
 
+<xs:complexType name="buscarLugar">
+<xs:sequence>
+<xs:element name="lug_id" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="buscarLugarResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="buscar">
 <xs:sequence>
-<xs:element name="pro_id" type="xs:string" minOccurs="0"/>
+<xs:element name="pro_nombre" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
