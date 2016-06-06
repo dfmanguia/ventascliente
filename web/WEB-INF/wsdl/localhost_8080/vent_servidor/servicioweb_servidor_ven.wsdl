@@ -4,48 +4,6 @@
 <xsd:import namespace="http://pkg_servicio_web_vent/" schemaLocation="http://localhost:8080/vent_servidor/servicioweb_servidor_ven?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="getList">
-<part name="parameters" element="tns:getList"/>
-</message>
-<message name="getListResponse">
-<part name="parameters" element="tns:getListResponse"/>
-</message>
-<message name="modificar">
-<part name="parameters" element="tns:modificar"/>
-</message>
-<message name="modificarResponse">
-<part name="parameters" element="tns:modificarResponse"/>
-</message>
-<message name="setList">
-<part name="parameters" element="tns:setList"/>
-</message>
-<message name="setListResponse">
-<part name="parameters" element="tns:setListResponse"/>
-</message>
-<message name="buscartodoooo">
-<part name="parameters" element="tns:buscartodoooo"/>
-</message>
-<message name="buscartodooooResponse">
-<part name="parameters" element="tns:buscartodooooResponse"/>
-</message>
-<message name="eliminar">
-<part name="parameters" element="tns:eliminar"/>
-</message>
-<message name="eliminarResponse">
-<part name="parameters" element="tns:eliminarResponse"/>
-</message>
-<message name="buscar">
-<part name="parameters" element="tns:buscar"/>
-</message>
-<message name="buscarResponse">
-<part name="parameters" element="tns:buscarResponse"/>
-</message>
-<message name="insertar">
-<part name="parameters" element="tns:insertar"/>
-</message>
-<message name="insertarResponse">
-<part name="parameters" element="tns:insertarResponse"/>
-</message>
 <message name="setVenta">
 <part name="parameters" element="tns:setVenta"/>
 </message>
@@ -58,35 +16,49 @@
 <message name="getVentaResponse">
 <part name="parameters" element="tns:getVentaResponse"/>
 </message>
+<message name="insertar">
+<part name="parameters" element="tns:insertar"/>
+</message>
+<message name="insertarResponse">
+<part name="parameters" element="tns:insertarResponse"/>
+</message>
+<message name="eliminar">
+<part name="parameters" element="tns:eliminar"/>
+</message>
+<message name="eliminarResponse">
+<part name="parameters" element="tns:eliminarResponse"/>
+</message>
+<message name="modificar">
+<part name="parameters" element="tns:modificar"/>
+</message>
+<message name="modificarResponse">
+<part name="parameters" element="tns:modificarResponse"/>
+</message>
+<message name="buscartodoooo">
+<part name="parameters" element="tns:buscartodoooo"/>
+</message>
+<message name="buscartodooooResponse">
+<part name="parameters" element="tns:buscartodooooResponse"/>
+</message>
+<message name="setList">
+<part name="parameters" element="tns:setList"/>
+</message>
+<message name="setListResponse">
+<part name="parameters" element="tns:setListResponse"/>
+</message>
+<message name="buscar">
+<part name="parameters" element="tns:buscar"/>
+</message>
+<message name="buscarResponse">
+<part name="parameters" element="tns:buscarResponse"/>
+</message>
+<message name="getList">
+<part name="parameters" element="tns:getList"/>
+</message>
+<message name="getListResponse">
+<part name="parameters" element="tns:getListResponse"/>
+</message>
 <portType name="servicioweb_servidor_ven">
-<operation name="getList">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getListRequest" message="tns:getList"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getListResponse" message="tns:getListResponse"/>
-</operation>
-<operation name="modificar">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/modificarRequest" message="tns:modificar"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/modificarResponse" message="tns:modificarResponse"/>
-</operation>
-<operation name="setList">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setListRequest" message="tns:setList"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setListResponse" message="tns:setListResponse"/>
-</operation>
-<operation name="buscartodoooo">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscartodooooRequest" message="tns:buscartodoooo"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscartodooooResponse" message="tns:buscartodooooResponse"/>
-</operation>
-<operation name="eliminar">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/eliminarRequest" message="tns:eliminar"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/eliminarResponse" message="tns:eliminarResponse"/>
-</operation>
-<operation name="buscar">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscarRequest" message="tns:buscar"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscarResponse" message="tns:buscarResponse"/>
-</operation>
-<operation name="insertar">
-<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/insertarRequest" message="tns:insertar"/>
-<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/insertarResponse" message="tns:insertarResponse"/>
-</operation>
 <operation name="setVenta">
 <input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setVentaRequest" message="tns:setVenta"/>
 <output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setVentaResponse" message="tns:setVentaResponse"/>
@@ -95,10 +67,38 @@
 <input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getVentaRequest" message="tns:getVenta"/>
 <output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getVentaResponse" message="tns:getVentaResponse"/>
 </operation>
+<operation name="insertar">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/insertarRequest" message="tns:insertar"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/insertarResponse" message="tns:insertarResponse"/>
+</operation>
+<operation name="eliminar">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/eliminarRequest" message="tns:eliminar"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/eliminarResponse" message="tns:eliminarResponse"/>
+</operation>
+<operation name="modificar">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/modificarRequest" message="tns:modificar"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/modificarResponse" message="tns:modificarResponse"/>
+</operation>
+<operation name="buscartodoooo">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscartodooooRequest" message="tns:buscartodoooo"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscartodooooResponse" message="tns:buscartodooooResponse"/>
+</operation>
+<operation name="setList">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setListRequest" message="tns:setList"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/setListResponse" message="tns:setListResponse"/>
+</operation>
+<operation name="buscar">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscarRequest" message="tns:buscar"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/buscarResponse" message="tns:buscarResponse"/>
+</operation>
+<operation name="getList">
+<input wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getListRequest" message="tns:getList"/>
+<output wsam:Action="http://pkg_servicio_web_vent/servicioweb_servidor_ven/getListResponse" message="tns:getListResponse"/>
+</operation>
 </portType>
 <binding name="servicioweb_servidor_venPortBinding" type="tns:servicioweb_servidor_ven">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="getList">
+<operation name="setVenta">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -107,43 +107,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="modificar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="setList">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="buscartodoooo">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="eliminar">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="buscar">
+<operation name="getVenta">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -161,7 +125,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="setVenta">
+<operation name="eliminar">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -170,7 +134,43 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="getVenta">
+<operation name="modificar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="buscartodoooo">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="setList">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="buscar">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="getList">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

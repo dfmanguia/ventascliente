@@ -37,7 +37,7 @@ public class Venta_Cliente {
     public String ven_lugar = "";
     public String ven_nombre = "";
     public String mensaje = "";
-
+    
     public ServicioWebServidor_Service getService() {
         return service;
     }
@@ -61,7 +61,7 @@ public class Venta_Cliente {
     public void setPort(ServicioWebServidor port) {
         this.port = port;
     }
-
+    
     public String getVen_id() {
         return ven_id;
     }
@@ -175,7 +175,7 @@ public class Venta_Cliente {
         for (int i = 0; i < l1.size(); i++) {
             System.out.println("" + l1.get(i).getVenId()+" "+l1.get(i).getVenNombre()+" "+l1.get(i).getVenLugar());
         }
-
+        
         return l1;
     }
      public List<pkg_servicio_web.Proyecto> buscartodopro() {
